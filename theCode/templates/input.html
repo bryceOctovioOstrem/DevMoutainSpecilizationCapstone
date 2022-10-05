@@ -1,0 +1,167 @@
+{%extends 'base.html'%}
+{%set active_page = 'new_item'%}
+{%block title %} Adfd new item - {% endblock %}
+
+{% block content %}
+<div>
+    <div class="jumbotron">
+        {% if current_user.is_authenticated %}
+        <p>Hi {{current_user.username}}</p>
+        {% else %}
+        <p>Please login or register</p>
+        {% endif %}
+
+    </div>
+</div>
+<!-- <div class=""row>
+    <div class="col-lg-7 offset-lg-2 my-5">
+        <h1>add new monster</h1>
+         <form method="Post" action="{{ url_for('input')}}">
+            <div class="form-group">
+                <label>author</label>
+                <input class="author" type="text" name="author">
+            </div>
+            <div class="form-group">
+                <label>Monster Name</label>
+                <input class="monster_name" type="text" name="monster_name">
+            </div>
+            <div class="form-group">
+                <label>Challange Rating</label>
+                <input class="challange_rating" type="text" name="challange_rating">
+            </div>
+            <div class="form-group">
+                <label>experience</label>
+                <input class="experience" type="integer" name="experience">
+            </div>
+            <div class="form-group">
+                <label>Size</label>
+                <input class="size" type="text" name="experience">
+            </div>
+            <div class="form-group">
+                <label>initative</label>
+                <input class="initative" type="text" name="experience">
+            </div>
+            <div class="form-group">
+                <label>preception</label>
+                <input class="preception" type="text" name="preception">
+            </div>
+            <div class="form-group">
+                <label>hp</label>
+                <input class="hp" type="text" name="hp">
+            </div>
+            <div class="form-group">
+                <label>AC</label>
+                <input class="AC" type="integer" name="Eac">
+            </div>
+            <div class="form-group">
+                <label>description</label>
+                <input class="description" type="text" name="description">
+            </div>
+            <div class="form-group">
+                <label>Fort</label>
+                <input class="Fort" type="integer" name="Kac">
+            </div>
+            <div class="form-group">
+                <label>senses</label>
+                <input class="senses" type="text" name="senses">
+            </div>
+            <div class="form-group">
+                <label>reflexes</label>
+                <input class="reflexes" type="integer" name="reflexes">
+            </div>
+            <div class="form-group">
+                <label>will</label>
+                <input class="will" type="integer" name="will">
+            </div>
+            <div class="form-group">
+                <label>defensive abilities</label>
+                <input class="defensive_abilities" type="text" name="defensive_abilities">
+            </div>
+            <div class="form-group">
+                <label>immunities</label>
+                <input class="immunities" type="text" name="immunities">
+            </div>
+            <div class="form-group">
+                <label>speed</label>
+                <input class="speed" type="text" name="speed">
+            </div>
+            <div class="form-group">
+                <label>melee</label>
+                <input class="melee" type="text" name="melee">
+            </div>
+            <div class="form-group">
+                <label>ranged</label>
+                <input class="ranged" type="text" name="ranged">
+            </div>
+            <div class="form-group">
+                <label>statistics</label>
+                <input class="statistics" type="text" name="statistics">
+            </div>
+            <div class="form-group">
+                <label>skills</label>
+                <input class="skills" type="text" name="skills">
+            </div>
+            <div class="form-group">
+                <label>languges</label>
+                <input class="languges" type="text" name="languges">
+            <div class="form-group">
+                <label>treasure</label>
+                <input class="treasure" type="text" name="treasure">
+            </div>
+            <div class="form-group">
+                <label>organization</label>
+                <input class="organization" type="text" name="organization">
+            </div> 
+            
+        </form>
+    </div>
+</div> -->
+<style>
+.input{
+    background-image:url('https://i.stack.imgur.com/zHeVd.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: green;
+    color:orange;
+}
+mark {
+    background-color: black;
+    color :aqua;
+}
+.jumbotron{
+    background-color: black;
+    color :aqua;
+}
+</style>
+<div class="input">
+<form method="post">
+    {{form.hidden_tag()}}
+    <mark>{{form.author.label}}</mark>{{form.author}}<br>
+    <mark>{{form.monster_name.label}}</mark>{{form.monster_name}}<br>
+    <mark>{{form.challange_rating.label}}</mark>{{form.challange_rating}}<br>
+    <mark>{{form.experience.label}}</mark>{{form.experience}}<br>
+    <mark>{{form.Size.label}}</mark>{{form.Size}}<br>
+    <mark>{{form.initative.label}}</mark>{{form.initative}}<br>
+    <mark>{{form.preception.label}}</mark>{{form.preception}}<br>
+    <mark>{{form.hp.label}}</mark>{{form.hp}}<br>
+    <mark>{{form.AC.label}}</mark>{{form.AC}}<br>
+    <mark>{{form.description.label}}</mark>{{form.description}}<br>
+    <mark>{{form.Fort.label}}</mark>{{form.Fort}}<br>
+    <mark>{{form.senses.label}}</mark>{{form.senses}}<br>
+    <mark>{{form.reflexes.label}}</mark>{{form.reflexes}}<br>
+    <mark>{{form.defensive_abilities.label}}</mark>{{form.defensive_abilities}}<br>
+    <mark>{{form.immunities.label}}</mark>{{form.immunities}}<br>
+    <mark>{{form.speed.label}}</mark>{{form.speed}}<br>
+    <mark>{{form.melee.label}}</mark>{{form.melee}}<br>
+    <mark>{{form.statistics.label}}</mark>{{form.statistics}}<br>
+    <mark>{{form.skills.label}}</mark>{{form.skills}}<br>
+    <mark>{{form.languges.label}}</mark>{{form.languges}}<br>
+    <mark>{{form.treasure.label}}</mark>{{form.treasure}}<br>
+    <mark>{{form.organization.label}}</mark>{{form.organization}}<br>
+    <mark>{{form.will.label}}</mark>{{form.will}}<br>
+    <mark>{{form.Ranged.label}}</mark>{{form.Ranged}}<br>
+    {{form.submit()}}
+</form>
+</div>
+
+{% endblock %}

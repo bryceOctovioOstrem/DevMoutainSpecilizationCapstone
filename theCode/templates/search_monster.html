@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .jumbo{
+        background-color: black;
+        color :yellow;
+    }
+</style>
+<div class="jumbo">
+    <form method="post">
+        {{form.hidden_tag()}}
+        <p>Monseter Name</p>{{form.monster_name}}<br>
+        <p></p>{{form.submit()}}<br>
+        <p>Monser Name</p>{{monsterWanted.monster_name}}<br>
+        <p>experience</p>{{monsterWanted.experience}}<br>
+        <p>Size</p>{{monsterWanted.Size}}<br>
+        <p>initative</p>{{monsterWanted.initative}}<br>
+        <p>perception</p>{{monsterWanted.perception}}<br>
+        <p>hp</p>{{monsterWanted.hp}}<br>
+        <p>Eac</p>{{monsterWanted.Eac}}<br>
+        <p>Kac</p>{{monsterWanted.Kac}}<br>
+        <p>Fort</p>{{monsterWanted.Fort}}<br>
+        <p>reflexes</p>{{monsterWanted.reflexes}}<br>
+        <p>will</p>{{monsterWanted.will}}<br>
+        <p>immunities</p>{{monsterWanted.immunities}}<br>
+        <p>speed</p>{{monsterWanted.speed}}<br>
+        <p>melee</p>{{monsterWanted.melee}}<br>
+        <p>statistics</p>{{monsterWanted.statistics}}<br>
+        <p>languges</p>{{monsterWanted.languges}}<br>
+        <p>treasure</p>{{monsterWanted.treasure}}<br>
+        <p>space</p>{{monsterWanted.space}}<br>
+        <p>organization</p>{{monsterWanted.organization}}<br>
+
+            
+    </form>
+    </div>
+{% endblock %}
